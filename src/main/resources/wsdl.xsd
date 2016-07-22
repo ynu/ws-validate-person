@@ -1,0 +1,65 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://web-service.ynu.edu.cn/validate-person"
+           targetNamespace="http://web-service.ynu.edu.cn/validate-person" elementFormDefault="qualified">
+
+    <xs:element name="validatePersonRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PERSON" type="tns:PERSON"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="validatePersonResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="RTN_PERSON" type="tns:RTN_PERSON"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="PERSON">
+        <xs:sequence>
+            <xs:element name="USR_ID" type="xs:string"/>
+            <xs:element name="USR_PWD" type="xs:string"/>
+            <xs:element name="PERSON_INFO_LIST">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="PERSON_INFO" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element type="xs:string" name="SORT_ID"/>
+                                    <xs:element type="xs:string" name="PASS_TYPE"/>
+                                    <xs:element type="xs:string" name="PASS_NO"/>
+                                    <xs:element type="xs:string" name="PERSON_NM"/>
+                                    <xs:element type="xs:string" name="UNIV_ID"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RTN_PERSON">
+        <xs:sequence>
+            <xs:element name="ERR_ID" type="xs:string"/>
+            <xs:element name="ERR_MSG" type="xs:string"/>
+            <xs:element name="RTN_PERSON_INFO_LIST">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="RTN_PERSON_INFO" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element type="xs:string" name="SORT_ID"/>
+                                    <xs:element type="xs:string" name="PERSON_TYPE"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
