@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package hello;
+package com.liudonghua.ws;
 
 import cn.edu.ynu.web_service.validate_person.PERSON;
 import cn.edu.ynu.web_service.validate_person.ValidatePersonRequest;
