@@ -1,0 +1,13 @@
+<urlrewrite>
+    <!--
+    <rule>
+        <from>/ws/validate-person?wsdl</from>
+        <to>/ws/validate-person.wsdl</to>
+    </rule>
+    -->
+    <rule>
+        <condition type="query-string">wsdl</condition>
+        <from>^/ws/validate-person$</from>
+        <to>/ws/validate-person.wsdl</to>
+    </rule>
+</urlrewrite>

@@ -27,6 +27,11 @@
 			<groupId>wsdl4j</groupId>
 			<artifactId>wsdl4j</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.tuckey</groupId>
+			<artifactId>urlrewritefilter</artifactId>
+			<version>4.0.3</version>
+		</dependency>
 		<!-- end::springws[] -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
