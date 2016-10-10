@@ -1,5 +1,5 @@
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-                  xmlns="http://web-service.ynu.edu.cn/validate-person">
+                  xmlns="http://web-service-ceair.ynu.edu.cn/validate-person">
     <soapenv:Header/>
     <soapenv:Body>
         <validatePersonRequest>

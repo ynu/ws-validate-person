@@ -16,8 +16,8 @@
 
 package com.liudonghua.ws;
 
-import cn.edu.ynu.web_service.validate_person.PERSON;
-import cn.edu.ynu.web_service.validate_person.ValidatePersonRequest;
+import cn.edu.ynu.web_service_ceair.validate_person.PERSON;
+import cn.edu.ynu.web_service_ceair.validate_person.ValidatePersonRequest;
 import com.liudonghua.ws.Application;
 import org.junit.Before;
 import org.junit.Test;

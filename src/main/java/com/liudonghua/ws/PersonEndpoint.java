@@ -1,9 +1,9 @@
 package com.liudonghua.ws;
 
-import cn.edu.ynu.web_service.validate_person.PERSON;
-import cn.edu.ynu.web_service.validate_person.RTNPERSON;
-import cn.edu.ynu.web_service.validate_person.ValidatePersonRequest;
-import cn.edu.ynu.web_service.validate_person.ValidatePersonResponse;
+import cn.edu.ynu.web_service_ceair.validate_person.PERSON;
+import cn.edu.ynu.web_service_ceair.validate_person.RTNPERSON;
+import cn.edu.ynu.web_service_ceair.validate_person.ValidatePersonRequest;
+import cn.edu.ynu.web_service_ceair.validate_person.ValidatePersonResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @Endpoint
 public class PersonEndpoint {
-    private static final String NAMESPACE_URI = "http://web-service.ynu.edu.cn/validate-person";
+    private static final String NAMESPACE_URI = "http://web-service-ceair.ynu.edu.cn/validate-person";
 
     private PersonRepository personRepository;
 

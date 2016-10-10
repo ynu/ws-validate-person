@@ -23,12 +23,12 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
 
-    @Bean(name = "wsdl")
+    @Bean(name = "validate-person")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema wsdlSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("validatePersonsPort");
         wsdl11Definition.setLocationUri("/ws/validate-person");
-        wsdl11Definition.setTargetNamespace("http://web-service.ynu.edu.cn/validate-person");
+        wsdl11Definition.setTargetNamespace("http://web-service-ceair.ynu.edu.cn/validate-person");
         wsdl11Definition.setSchema(wsdlSchema);
         return wsdl11Definition;
     }
