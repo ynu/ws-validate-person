@@ -64,6 +64,7 @@
                         <goals>
                             <goal>xjc</goal>
                         </goals>
+                        <phase>none</phase>
                     </execution>
                 </executions>
                 <configuration>
