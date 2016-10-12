@@ -71,7 +71,7 @@ public class PersonEndpoint {
             PERSON.PERSONINFOLIST.PERSONINFO personInfo = personInfolist.get(i);
             RTNPERSON.RTNPERSONINFOLIST.RTNPERSONINFO rtnPersonInfo = new RTNPERSON.RTNPERSONINFOLIST.RTNPERSONINFO();
             rtnPersonInfo.setSORTID(personInfo.getSORTID());
-            rtnPersonInfo.setPERSONTYPE("OK");
+            rtnPersonInfo.setPERSONTYPE("1");
             rtnPersonInfolist.add(rtnPersonInfo);
         }
         StringWriter result = new StringWriter();
