@@ -4,7 +4,7 @@ import cn.edu.ynu.web_service_ceair.validate_person.PERSON;
 import cn.edu.ynu.web_service_ceair.validate_person.RTNPERSON;
 import cn.edu.ynu.web_service_ceair.validate_person.ValidatePersonRequest;
 import cn.edu.ynu.web_service_ceair.validate_person.ValidatePersonResponse;
-import com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler;
+//import com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.XmlMappingException;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
@@ -77,15 +77,16 @@ public class PersonEndpoint {
         StringWriter result = new StringWriter();
         try {
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            marshaller.setProperty("com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler",
-                    new CharacterEscapeHandler() {
-                        @Override
-                        public void escape(char[] ch, int start, int length,
-                                           boolean isAttVal, Writer writer)
-                                throws IOException {
-                            writer.write(ch, start, length);
-                        }
-                    });
+            // fix package com.sun.xml.internal.bind.marshaller does not exist
+//            marshaller.setProperty("com.sun.xml.internal.bind.marshaller.CharacterEscapeHandler",
+//                    new CharacterEscapeHandler() {
+//                        @Override
+//                        public void escape(char[] ch, int start, int length,
+//                                           boolean isAttVal, Writer writer)
+//                                throws IOException {
+//                            writer.write(ch, start, length);
+//                        }
+//                    });
             marshaller.marshal(rtnPerson, result);
         } catch (JAXBException e) {
             e.printStackTrace();
